@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    const path = window.location.pathname;
+    const redirects = {
+      '/AI/product/chatgpt': '/AI/ai-tools/chatgpt',
+      '/AI/download/claude': '/AI/ai-tools/claude/download',
+      '/AI/software/midjourney': '/AI/ai-tools/midjourney',
+      '/AI/apps/stable-diffusion': '/AI/ai-tools/stable-diffusion'
+    };
+    
+    const target = redirects[path];
+    if (target) {
+      window.location.replace(target);
+    } else {
+      document.write('<h1>AI Tools Directory</h1>');
+    }
+  </script>
+</head>
+<body>
+  <h1>AI Tools Directory</h1>
+  <ul>
+    <li><a href="/AI/ai-tools/chatgpt">ChatGPT</a></li>
+    <li><a href="/AI/ai-tools/claude/download">Claude</a></li>
+    <li><a href="/AI/ai-tools/midjourney">Midjourney</a></li>
+    <li><a href="/AI/ai-tools/stable-diffusion">Stable Diffusion</a></li>
+  </ul>
+</body>
+</html>
